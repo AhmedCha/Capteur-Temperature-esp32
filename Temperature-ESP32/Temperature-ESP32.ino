@@ -4,7 +4,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define ONE_WIRE_BUS 5
+#define ONE_WIRE_BUS 4
 
 // Setup a oneWire instance to communicate with any OneWire devices
 OneWire oneWire(ONE_WIRE_BUS);
@@ -12,12 +12,13 @@ OneWire oneWire(ONE_WIRE_BUS);
 // Pass our oneWire reference to Dallas Temperature sensor
 DallasTemperature sensors(&oneWire);
 
-
-// Update these with values suitable for your network.
+// Wifi credentials.
 const char* ssid = "Pas de connection :(";
 const char* password = "men1lel9";
+
+//MQTT credentials
 const char* mqtt_server = "c6780cfec9814f9eae33835beeda43f3.s1.eu.hivemq.cloud";
-const int mqtt_port = 8883;  // Use 1883 for non-secure connections
+const int mqtt_port = 8883;
 const char* mqtt_user = "ESP32-1";
 const char* mqtt_password = "ESP32nb1";
 
